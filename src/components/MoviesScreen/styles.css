@@ -1,0 +1,39 @@
+.MoviesScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MoviesScreen h2 {
+  font-size: 24px;
+  font-weight: 400;
+
+  text-align: center;
+  margin-top: 107px;
+  margin-bottom: 40px;
+}
+
+.Movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Movie {
+  width: 145px;
+  height: 209px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 11px;
+}
+
+.Movie img {
+  width: 129px;
+  height: 193px;
+}

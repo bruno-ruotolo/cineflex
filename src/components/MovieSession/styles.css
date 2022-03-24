@@ -1,0 +1,37 @@
+.MovieSession {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MovieSession .schedules {
+  margin-left: 24px;
+}
+
+.MovieSession h2 {
+  font-size: 24px;
+  font-weight: 400;
+
+  text-align: center;
+  margin-top: 107px;
+  margin-bottom: 40px;
+}
+
+.MovieSession p {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  color: #293845;
+  margin-bottom: 22px;
+}
+
+.MovieSession button {
+  width: 83px;
+  height: 43px;
+  background-color: #E8833A;
+  border-radius: 3px;
+  border: none;
+  color: #ffffff;
+  margin-right: 8px;
+  margin-bottom: 22px;
+}
