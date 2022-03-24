@@ -1,16 +1,18 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 
 import Footer from "../Footer/Footer"
 
 import "./styles.css"
 
 export default function MovieSession() {
+  const [sessions, setSession] = useState({ days: [] });
 
-  const [sessions, setSession] = useState({});
+  const { movieId } = useParams();
 
   useEffect(() => {
-    const promise = axios.get("https://mock-api.driven.com.br/api/v5/cineflex/movies/1/showtimes")
+    const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${movieId}/showtimes`)
     promise.then((response) => {
       const { data } = response;
       setSession(data);
@@ -23,14 +25,14 @@ export default function MovieSession() {
     <>
       <div className="MovieSession">
         <h2>Selecione o horário</h2>
-        {days.map((day) => {
-          const { weekday, date } = day;
+        {days.map((day, index) => {
+          const { weekday, date, showtimes } = day;
           return (
-            <div className="schedules">
+            <div className="schedules" key={movieId + index}>
               <p>{weekday} - {date}</p>
               <div>
-                <button>15:00</button>
-                <button>15:00</button>
+                <button>{showtimes[0].name}</button>
+                <button>{showtimes[1].name}</button>
               </div>
             </div>
           )

@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 import "./styles.css"
 
@@ -24,7 +25,9 @@ export default function MoviesScreen() {
           const { id, title, posterURL } = movie;
           return (
             <div className="Movie" key={id}>
-              <img src={posterURL} alt={title} />
+              <Link to={`/filme/${id}`}>
+                <img src={posterURL} alt={title} />
+              </Link>
             </div>
           )
         })}
