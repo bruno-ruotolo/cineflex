@@ -2,14 +2,18 @@ import "./styles.css"
 
 
 export default function Footer(props) {
-  const { title, posterURL } = props;
+  const { title, posterURL, weekday, hour } = props;
 
   return (
     <div className="Footer">
-      <div>
+      <div className="movie-poster">
         <img src={posterURL} alt={title} />
       </div>
-      <p>{title}</p>
+
+      <div>
+        <p>{title}</p>
+        {weekday ? (<p>{weekday} - {hour}</p>) : (<p></p>)}
+      </div>
     </div>
   )
 }

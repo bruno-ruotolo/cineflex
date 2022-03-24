@@ -1,13 +1,13 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 import Footer from "../Footer/Footer"
 
 import "./styles.css"
 
-export default function MovieSession() {
-  const [sessions, setSession] = useState({ days: [] });
+export default function MovieDate() {
+  const [movieDate, setMovieDate] = useState({ days: [] });
 
   const { movieId } = useParams();
 
@@ -15,24 +15,33 @@ export default function MovieSession() {
     const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/movies/${movieId}/showtimes`)
     promise.then((response) => {
       const { data } = response;
-      setSession(data);
+      setMovieDate(data);
     })
-  }, []);
+  }, [movieId]);
 
-  const { days, title, posterURL } = sessions;
+  const { days, title, posterURL } = movieDate;
+  console.log(days);
 
-  return (
+  return days.length > 0 ? (
     <>
-      <div className="MovieSession">
+      <div className="MovieDate">
         <h2>Selecione o horário</h2>
         {days.map((day, index) => {
           const { weekday, date, showtimes } = day;
+          const [sessionOne, sessionTwo] = showtimes;
+          const { name: nameOne, id: idOne } = sessionOne;
+          const { name: nameTwo, id: idTwo } = sessionTwo;
           return (
             <div className="schedules" key={movieId + index}>
               <p>{weekday} - {date}</p>
               <div>
-                <button>{showtimes[0].name}</button>
-                <button>{showtimes[1].name}</button>
+                <Link to={`/sessao/${idOne}`}>
+                  <button>{nameOne}</button>
+                </Link>
+
+                <Link to={`/sessao/${idTwo}`}>
+                  <button>{nameTwo}</button>
+                </Link>
               </div>
             </div>
           )
@@ -41,5 +50,5 @@ export default function MovieSession() {
 
       <Footer title={title} posterURL={posterURL} />
     </>
-  )
+  ) : <p>Carregando...</p>
 }

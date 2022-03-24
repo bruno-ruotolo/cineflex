@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Header from "./Header/Header"
 import MoviesScreen from "./MoviesScreen/MoviesScreen"
-import MovieSession from "./MovieSession/MovieSession"
+import MovieDate from "./MovieDate/MovieDate"
+import MovieSessions from "./MovieSessions/MovieSessions"
 
 import "../css/reset.css"
 import "../css/styles.css"
@@ -16,7 +17,8 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<MoviesScreen />} />
-          <Route path="/filme/:movieId" element={<MovieSession />} />
+          <Route path="/filme/:movieId" element={<MovieDate />} />
+          <Route path="/sessao/:sessionID" element={<MovieSessions />} />
         </Routes>
       </main>
     </BrowserRouter>

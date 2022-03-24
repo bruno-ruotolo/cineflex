@@ -1,0 +1,117 @@
+.MovieSessions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MovieSessions h2 {
+  font-size: 24px;
+  font-weight: 400;
+
+  text-align: center;
+  margin-top: 107px;
+  margin-bottom: 40px;
+}
+
+.MovieSessions .seats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 330px;
+}
+
+.MovieSessions .seat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  /* border: 1px solid #808F9D; */
+  box-sizing: border-box;
+  border-radius: 12px;
+  margin-left: 7px;
+  margin-bottom: 19px;
+}
+
+.MovieSessions .seat p {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.MovieSessions .seats-subtitle {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.MovieSessions .seats-subtitle p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  align-items: center;
+  letter-spacing: -0.013em;
+  color: #4E5A65;
+  margin-top: 55px;
+}
+
+.available {
+  background-color: #C3CFD9;
+  border: 1px solid #7B8B99;
+}
+
+.selected {
+  background-color: #8DD7CF;
+  border: 1px solid #1AAE9E;
+}
+
+.unavailable {
+  background-color: #FBE192;
+  border: 1px solid #F7C52B;
+}
+
+.MovieSessions .user-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 41px;
+}
+
+.MovieSessions .user-data p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #293845;
+}
+
+.MovieSessions .user-data div:last-child {
+  margin-top: 7px;
+}
+
+.MovieSessions .user-data input {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding-left: 18px;
+  width: 327px;
+  height: 51px;
+  background-color: #FFFFFF;
+  border: 1px solid #D5D5D5;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.MovieSessions .user-data input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  position: absolute 0 auto;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #AFAFAF;
+}

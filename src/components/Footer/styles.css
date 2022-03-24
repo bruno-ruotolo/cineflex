@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.Footer div {
+.Footer .movie-poster {
   width: 64px;
   height: 89px;
   background-color: #FFFFFF;

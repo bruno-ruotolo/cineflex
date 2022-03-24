@@ -1,14 +1,14 @@
-.MovieSession {
+.MovieDate {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.MovieSession .schedules {
+.MovieDate .schedules {
   margin-left: 24px;
 }
 
-.MovieSession h2 {
+.MovieDate h2 {
   font-size: 24px;
   font-weight: 400;
 
@@ -17,7 +17,7 @@
   margin-bottom: 40px;
 }
 
-.MovieSession p {
+.MovieDate p {
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.02em;
@@ -25,7 +25,7 @@
   margin-bottom: 22px;
 }
 
-.MovieSession button {
+.MovieDate button {
   width: 83px;
   height: 43px;
   background-color: #E8833A;
