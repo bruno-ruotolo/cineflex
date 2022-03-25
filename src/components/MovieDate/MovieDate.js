@@ -27,10 +27,12 @@ export default function MovieDate() {
       <div className="MovieDate">
         <h2>Selecione o horário</h2>
         {days.map((day, index) => {
+
           const { weekday, date, showtimes } = day;
           const [sessionOne, sessionTwo] = showtimes;
           const { name: nameOne, id: idOne } = sessionOne;
           const { name: nameTwo, id: idTwo } = sessionTwo;
+
           return (
             <div className="schedules" key={movieId + index}>
               <p>{weekday} - {date}</p>
@@ -45,6 +47,7 @@ export default function MovieDate() {
               </div>
             </div>
           )
+
         })}
       </div>
 

@@ -8,7 +8,6 @@
 .MovieSessions h2 {
   font-size: 24px;
   font-weight: 400;
-
   text-align: center;
   margin-top: 107px;
   margin-bottom: 40px;
@@ -114,4 +113,17 @@
   font-size: 18px;
   line-height: 21px;
   color: #AFAFAF;
+}
+
+.MovieSessions button {
+  width: 225px;
+  height: 42px;
+  background-color: #E8833A;
+  border-radius: 3px;
+  border: none;
+  color: #ffffff;
+  margin-top: 57px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif
 }

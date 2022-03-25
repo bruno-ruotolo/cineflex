@@ -8,6 +8,11 @@
   margin-left: 24px;
 }
 
+.MovieDate .schedules:last-child {
+  margin-left: 24px;
+  margin-bottom: 140px;
+}
+
 .MovieDate h2 {
   font-size: 24px;
   font-weight: 400;

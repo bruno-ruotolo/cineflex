@@ -11,21 +11,19 @@ export default function MovieSessions() {
 
   const [session, setSession] = useState({ day: {}, movie: {}, seats: [] });
 
+  const { sessionID } = useParams();
 
   useEffect(() => {
-    const promise = axios.get("https://mock-api.driven.com.br/api/v5/cineflex/showtimes/16/seats")
+    const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${sessionID}/seats`)
     promise.then((response) => {
       const { data } = response;
       setSession(data);
     })
-  }, [])
-
+  }, [sessionID])
 
   const { day, movie, name, seats } = session
   const { title, posterURL } = movie;
   const { weekday } = day;
-
-  console.log(session)
 
   return Object.keys(session).length > 0 ?
     (
@@ -54,16 +52,20 @@ export default function MovieSessions() {
           </article>
 
           <article className="user-data">
-            <div>
+            <div className="input-name">
               <p>Nome do comprador:</p>
               <input type="text" placeholder="Digite seu nome..." />
             </div>
 
-            <div>
+            <div className="input-cpf">
               <p>CPF do comprador:</p>
               <input type="text" placeholder="Digite seu CPF..." />
             </div>
           </article>
+
+          <Link to="/sucesso">
+            <button>Reservar assento(s)</button>
+          </Link>
 
         </section>
         <Footer title={title} posterURL={posterURL} weekday={weekday} hour={name} />
