@@ -21,13 +21,13 @@
   text-align: center;
   margin-top: 107px;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .MovieSucess div {
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+  align-items: flex-start;
 }
 
 .MovieSucess div h3 {
