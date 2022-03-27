@@ -20,7 +20,6 @@ export default function MovieDate() {
   }, [movieId]);
 
   const { days, title, posterURL } = movieDate;
-  console.log(days);
 
   return days.length > 0 ? (
     <>
