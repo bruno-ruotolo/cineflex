@@ -43,7 +43,7 @@ export default function MovieSessions() {
           {
             ...dataObject,
             movie: title,
-            weekday: weekday,
+            date: date,
             hour: name,
             seatName: selectedSeats.seatName,
           }
@@ -53,7 +53,7 @@ export default function MovieSessions() {
     }
   }
 
-  const { day: { weekday }, movie: { title, posterURL }, name, seats } = session
+  const { day: { weekday, date }, movie: { title, posterURL }, name, seats } = session
 
   const dataObject =
   {

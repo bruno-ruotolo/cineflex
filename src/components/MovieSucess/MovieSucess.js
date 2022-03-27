@@ -4,7 +4,7 @@ import "./styles.css"
 
 export default function MovieSucess() {
   const location = useLocation();
-  const { state: { name, cpf, movie, hour, weekday, seatName } } = location
+  const { state: { name, cpf, movie, hour, date, seatName } } = location
   const cpfMask = cpf
     .replace(/(\d{3})(\d)/, '$1.$2')
     .replace(/(\d{3})(\d)/, '$1.$2')
@@ -17,7 +17,7 @@ export default function MovieSucess() {
         <div>
           <h3>Filme e sessão</h3>
           <p>{movie}</p>
-          <p>{weekday} {hour}</p>
+          <p>{date} {hour}</p>
         </div>
 
         <div>
