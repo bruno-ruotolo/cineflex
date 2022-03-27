@@ -116,6 +116,7 @@ export default function MovieSessions() {
               <p>CPF do comprador:</p>
               <input
                 maxLength="11"
+                minLength="11"
                 name="cpf"
                 type="text"
                 placeholder="Digite seu CPF... (somente números)"
