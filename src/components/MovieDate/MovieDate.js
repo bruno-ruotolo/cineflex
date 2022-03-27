@@ -3,6 +3,8 @@ import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 
 import Footer from "../Footer/Footer"
+import BackArrow from "../BackArrow/BackArrow"
+import RealodingIcon from "../RealoadingIcon/RealodingIcon"
 
 import "./styles.css"
 
@@ -24,6 +26,7 @@ export default function MovieDate() {
   return days.length > 0 ? (
     <>
       <div className="MovieDate">
+        <BackArrow />
         <h2>Selecione o horário</h2>
         {days.map((day, index) => {
 
@@ -51,5 +54,5 @@ export default function MovieDate() {
 
       <Footer title={title} posterURL={posterURL} />
     </>
-  ) : <p>Carregando...</p>
+  ) : <RealodingIcon />
 }

@@ -5,8 +5,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Seat from "./Seat";
 import SeatsExemples from "./SeatsExemples";
+import BackArrow from "../BackArrow/BackArrow"
 
 import "./styles.css"
+import RealodingIcon from "../RealoadingIcon/RealodingIcon";
 
 export default function MovieSessions() {
 
@@ -28,13 +30,13 @@ export default function MovieSessions() {
   }, [sessionID]);
 
   function submitData(event) {
-    console.log(selectedSeats.seatId);
     if (selectedSeats.seatId.length === 0) {
       alert("Selecione pelo menos um assento");
     } else {
+
+      setSession({ ...session, seats: [] });
       event.preventDefault();
       const promise = axios.post("https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many", dataObject)
-
       promise.then(() => {
         navigate("/sucesso", {
           state:
@@ -60,10 +62,11 @@ export default function MovieSessions() {
     cpf: input.cpf,
   }
 
-  return Object.keys(session).length > 0 ?
+  return seats.length > 0 ?
     (
       <>
         <section className="MovieSessions">
+          <BackArrow />
           <h2>Selecione o(s) assento(s)</h2>
           <article className="seats">
             {seats.map((seat) => {
@@ -132,5 +135,5 @@ export default function MovieSessions() {
 
         <Footer title={title} posterURL={posterURL} weekday={weekday} hour={name} />
       </>
-    ) : <h1>Carregando...</h1>
+    ) : <RealodingIcon />
 }

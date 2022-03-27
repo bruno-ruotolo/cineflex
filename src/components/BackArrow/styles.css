@@ -1,0 +1,12 @@
+.BackArrow {
+  position: fixed;
+  top: 85px;
+  left: 5px;
+}
+
+.BackArrow img {
+  width: 30px;
+  height: 30px;
+  filter: contrast(0.2);
+  filter: opacity(0.5)
+}
