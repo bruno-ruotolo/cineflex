@@ -5,10 +5,8 @@ import "./styles.css"
 export default function MovieSucess() {
   const location = useLocation();
   const { state: { name, cpf, movie, hour, date, seatName } } = location
-  const cpfMask = cpf
-    .replace(/(\d{3})(\d)/, '$1.$2')
-    .replace(/(\d{3})(\d)/, '$1.$2')
-    .replace(/(\d{3})(\d{1,2})/, '$1-$2');
+  const pattern = /(\d{3})(\d{3})(\d{3})(\d{2})/;
+  const cpfMask = cpf.replace(pattern, '$1.$2.$3-$4');
 
   return (
     <div className="MovieSucess">
