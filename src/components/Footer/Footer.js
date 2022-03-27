@@ -1,6 +1,5 @@
 import "./styles.css"
 
-
 export default function Footer(props) {
   const { title, posterURL, weekday, hour } = props;
 

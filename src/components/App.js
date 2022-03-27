@@ -7,9 +7,6 @@ import MovieDate from "./MovieDate/MovieDate"
 import MovieSessions from "./MovieSessions/MovieSessions"
 import MovieSucess from "./MovieSucess/MovieSucess"
 
-import "../css/reset.css"
-import "../css/styles.css"
-
 export default function App() {
 
   return (

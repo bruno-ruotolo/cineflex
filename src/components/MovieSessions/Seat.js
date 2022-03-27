@@ -13,10 +13,9 @@ export default function Seat(props) {
       } else {
         setSeatselection(!seatSelection);
       }
-      callBack(seatClass, id);
+      callBack(seatClass, id, name);
     }}>
       <p>{name}</p>
     </div >
   )
-
 }

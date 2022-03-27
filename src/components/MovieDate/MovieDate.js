@@ -46,7 +46,6 @@ export default function MovieDate() {
               </div>
             </div>
           )
-
         })}
       </div>
 

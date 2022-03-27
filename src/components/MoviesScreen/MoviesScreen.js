@@ -19,7 +19,6 @@ export default function MoviesScreen() {
   return (
     <div className="MoviesScreen">
       <h2>Selecione o filme</h2>
-
       <div className="Movies">
         {movies.map((movie) => {
           const { id, title, posterURL } = movie;
@@ -32,7 +31,6 @@ export default function MoviesScreen() {
           )
         })}
       </div>
-
     </div>
   )
 }
