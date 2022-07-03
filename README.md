@@ -2,7 +2,7 @@
 In this project was developed an application to choose and buy tickets seats at movie theaters
 
 <hr></hr>
-<h3>Mobile Layout</h3> 
+<h3>Desktop Layout</h3> 
   <img src="/assets/cineflex.gif" />
 
 Try it out at https://projeto9-cineflex-chi.vercel.app
