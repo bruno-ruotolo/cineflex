@@ -9,7 +9,7 @@ Try it out at https://projeto9-cineflex-chi.vercel.app
 
 ## About
 
-Buying a ticket at movie theathers must be easy and fast, keeping this in mid, this application was developed, a fast and simple way to chosse and buy tickets for your favorites movies.
+Buying a ticket at movie theaters must be easy and fast, keeping this in mind, this application was developed, a fast and simple way to chosse and buy tickets for your favorites movies.
 
 - Dinamic Pages
 - Dinamic Content using React States
